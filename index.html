@@ -1,695 +1,2226 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="utf-8">
-      <meta content="width=device-width, initial-scale=1.0" name="viewport">
-      <title>Vasu Devan Portfolio</title>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Vasu Devan Portfolio</title>
       <meta content="" name="description">
       <meta content="" name="keywords">
       <!-- Favicons -->
-      <link href="assets/img/favicon.png" rel="icon">
-      <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-      <!-- Vendor CSS Files -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-      <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-      <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-      <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
-      <!-- Template Main CSS File -->
-      <link href="assets/css/style.css" rel="stylesheet">
-      <link href="assets/css/about.css" rel="stylesheet">
-      <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" rel="stylesheet">
-      <link rel="stylesheet" href="css/font-awesome.min.css" />
-      <link rel="stylesheet" type="text/css" href="css/fontello/css/fontello.css" />
-      <script>
-         window.onload = function() {
-             $('.imgzoom').imagePreviewer({
-                 scroll: false
-         
-         
-             });
-         
-         };
-      </script>
-   </head>
-   <body>
-      <header id="header" class="fixed-top">
-         <div class="container d-flex align-items-center justify-content-between">
-            <h1 class="logo"><a href="index.html">Portfolio</a></h1>
-            <nav id="navbar" class="navbar">
-               <ul>
-                  <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                  <li><a class="nav-link scrollto" href="#about">About</a></li>
-                  <li><a class="nav-link scrollto" href="#skill">Skills</a></li>
-                  <li><a class="nav-link scrollto " href="#work">Projects</a></li>
-                  <li><a class="nav-link scrollto " href="#t&c">Certifications</a></li>
-                  <li><a class="nav-link scrollto " href="#blog">Blog</a></li>
-                  <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-               </ul>
-               <i class="bi bi-list mobile-nav-toggle"></i>
-            </nav>
-         </div>
-      </header>
-      <div id="hero" class="hero route bg-image" style="background-image: url(assets/img/hero-bg.jpg);height: 650px;">
-         <div class="overlay-itro"></div>
-         <div class="hero-content display-table" >
-            <div class="table-cell">
-               <div class="container">
-                 
-                  <h4 class="hero-title mb-4">Vasu Devan</h4>
-                  <p class="hero-subtitle"><span class="typed" data-typed-items="Data Analyst, Data Visualizer,Jr.Data Scientist"></span></p>
-                 
-               </div>
-            </div>
-         </div>
+      <link href="./assets/images/img/favicon.png" rel="icon">
+      <link href="./assets/images/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!--
+    - favicon
+  -->
+  
+
+  
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+  <!-- <link href="https://unpkg.com/@primer/css@^20.2.4/dist/primer.css" rel="stylesheet" /> -->
+  <!--
+    - custom css link
+  -->
+  
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+  <style>
+
+.sidebar {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+    max-width: 320px;
+    text-align: center;
+}
+
+.avatar-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid #e0e0e0;
+    padding: 3px;
+    object-fit: cover;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.08);
+}
+
+.name {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-top: 10px;
+}
+
+.title {
+    background: #ffb700;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-block;
+    margin-top: 6px;
+}
+
+.contacts-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    background: #f9f9f9;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease-in-out;
+    gap: 10px;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+.contact-item:hover {
+    transform: scale(1.02);
+    background: #f5f5f5;
+}
+
+.icon-box {
+    background: #ffb700;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.icon-box ion-icon {
+    color: white;
+    font-size: 20px;
+}
+
+.contact-info {
+    flex-grow: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.contact-info:hover {
+    overflow: visible;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.contact-title {
+    font-size: 13px;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+}
+
+.contact-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: #222;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: block;
+}
+
+.contact-link:hover {
+    color: #ff9100;
+}
+
+.social-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-top: 15px;
+}
+
+.social-item {
+    list-style: none;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f3f3f3;
+    padding: 10px;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-link ion-icon {
+    font-size: 22px;
+    color: #555;
+    transition: color 0.3s;
+}
+
+.social-link:hover {
+    background: #ffb700;
+}
+
+.social-link:hover ion-icon {
+    color: white;
+}
+
+.separator {
+    height: 2px;
+    background: #e0e0e0;
+    margin: 20px 0;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        max-width: 280px;
+    }
+
+    .avatar-box img {
+        width: 90px;
+        height: 90px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .contact-info {
+        text-align: center;
+        margin-left: 0;
+        margin-top: 5px;
+    }
+}
+
+.experience-section {
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.experience-card {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.icon-box {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #ffa500;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.experience-content {
+    flex-grow: 1;
+}
+
+.experience-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.experience-duration {
+    font-size: 14px;
+    color: #ffa500;
+    margin-bottom: 8px;
+}
+
+.experience-description {
+    font-size: 14px;
+    color: #d3d3d3;
+    line-height: 1.5;
+}
+
+.education-section {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.education-card {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 20px 0;
+    border-radius: 0;
+    box-shadow: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.education-card:last-child {
+    border-bottom: none;
+}
+
+.icon-box {
+    flex-shrink: 0;
+    width: 50px;
+    height: 50px;
+    background-color: #ffa500;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+.education-content {
+    flex-grow: 1;
+}
+
+.education-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.education-duration {
+    font-size: 14px;
+    color: #ffa500;
+}
+
+.skills-section {
+    background-color: transparent;
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.skills-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills-category {
+    margin-bottom: 20px;
+}
+
+.category-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #090909;
+    margin: 10px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 10px;
+    justify-content: center;
+}
+
+.skill-card {
+    background-color: #1e1e1e;
+    padding: 10px 15px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s ease-in-out;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+body {
+    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+    color: #000;
+}
+</style>
+
+
+    <style>
+      body {
+    background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);
+    color: #333;
+}
+
+.about-text {
+    color: #f5f5f5;
+}
+
+.service-item {
+    background: #1e1e1e;
+    border: 1px solid #444;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-item-title,
+.service-item-text {
+    color: #ffffff;
+}
+
+.sidebar {
+    background: #f9f9f9;
+}
+
+.info-content .name {
+    color: #222;
+}
+
+.info-content .title {
+    color: white;
+    background: #222;
+}
+
+.contact-title,
+.contact-info a {
+    color: #222 !important;
+}
+
+.contact-info address {
+    color: #444 !important;
+}
+
+.navbar-link {
+    color: #666 !important;
+}
+
+.navbar-link.active {
+    color: #ff9100 !important;
+}
+
+.about {
+    background-color: #f9f9f9 !important;
+    color: #000 !important;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-text p {
+    color: #111 !important;
+}
+
+.service-item {
+    background: #ffffff !important;
+    border: 2px solid rgba(0, 0, 0, 0.1) !important;
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.service-item:hover {
+    background: #f0f0f0 !important;
+    border: 2px solid #ffb700;
+    box-shadow: 0 0 15px rgba(255, 183, 0, 0.2);
+}
+
+.service-item-title {
+    color: #222 !important;
+    font-weight: 600;
+}
+
+.service-item-text {
+    color: #333 !important;
+}
+
+.service-icon-box img {
+    filter: brightness(0.8);
+}
+
+.navbar {
+    margin-top: 1.5px;
+    background: #fff !important;
+    border-bottom: 4px solid rgba(0, 0, 0, 0.1);
+    border-left: 4px solid rgba(0.1, 0.1, 0.1, 0.1);
+    border-top: 1px solid rgba(0.1, 0.1, 0.1, 0.1);
+}
+
+.navbar-link {
+    color: #333 !important;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-link:hover,
+.navbar-link:focus {
+    color: #ff9100 !important;
+}
+
+.navbar-link.active {
+    color: #ffb700 !important;
+    font-weight: 600;
+}
+
+.navbar {
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+    
+  
+.experience-card {
+    background: #ffffff !important;  
+    border: 2px solid rgba(0, 0, 0, 0.15) !important; 
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px; 
+}
+
+
+.experience-card:hover {
+    background: #f9f9f9 !important;  
+    border: 2px solid #ffb700 !important;  
+    box-shadow: 0 0 15px rgba(255, 183, 0, 0.2);
+}
+
+
+.experience-title {
+    color: #222 !important;  
+    font-weight: 600;
+}
+
+.experience-duration {
+    color: #444 !important; 
+    font-weight: 500;
+}
+
+.experience-description {
+    color: #333 !important;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+.icon-box {
+    background: #fff !important; 
+    color: #ffb700 !important; 
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.experience-section {
+  background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); 
+    color: #000 !important;  
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.education-card {
+    background: #ffffff !important; 
+    border: 2px solid rgba(0, 0, 0, 0.15) !important; 
+    border-radius: 12px;
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}
+
+
+.education-card:hover {
+    background: #f9f9f9 !important;  
+    border: 2px solid #ffb700 !important; 
+    box-shadow: 0 0 15px rgba(255, 183, 0, 0.2);
+}
+
+
+.education-title {
+    color: #222 !important; 
+    font-weight: 600;
+}
+
+.education-duration {
+    color: #444 !important; 
+    font-weight: 500;
+}
+
+
+.icon-box {
+    background: #fff !important; 
+    color: #ffb700 !important; 
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.skills-section {
+  background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); 
+    color: #000 !important;  
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.skill-card {
+    background: #ffffff !important; 
+    color: #222 !important; 
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.skill-card:hover {
+    background: #f9f9f9 !important; 
+    border: 2px solid #ffb700 !important; 
+    box-shadow: 0 0 10px rgba(255, 183, 0, 0.2);
+}
+
+
+
+.projects {
+  background: linear-gradient(to bottom, #f9f9f9, #e0e0e0); 
+    color: #000 !important;  
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.project-item {
+    background: #ffffff !important; 
+    border: 2px solid rgba(0, 0, 0, 0.1) !important; 
+    border-radius: 12px;
+    padding: 15px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+
+.project-item:hover {
+    background: #f9f9f9 !important; 
+    border: 2px solid #ffb700 !important; 
+    box-shadow: 0 0 15px rgba(255, 183, 0, 0.2);
+}
+
+
+.project-title {
+    color: #222 !important;  
+    font-weight: 600;
+}
+
+
+.project-category {
+    color: #444 !important; 
+    font-weight: 500;
+}
+
+
+.project-img {
+    background: #fff !important; 
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.filter-list button {
+    background: #ffffff !important; 
+    color: #222 !important; 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.filter-list button:hover,
+.filter-list button.active {
+    background: #ffb700 !important; 
+    color: #fff !important;
+    border: 1px solid #ffb700;
+    box-shadow: 0 0 10px rgba(255, 183, 0, 0.2);
+}
+
+.experience-card,
+.education-card,
+.service-item,
+.skill-card,
+.project-item {
+    background: #ffffff !important;  
+    border-radius: 15px;  
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  
+    transition: all 0.3s ease-in-out; 
+}
+
+
+.experience-card:hover,
+.education-card:hover,
+.service-item:hover,
+.skill-card:hover,
+.project-item:hover
+.am-card:hover {
+    transform: translateY(-5px);  
+    background: #f9f9f9 !important;  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+
+.experience-title,
+.education-title,
+.service-item-title,
+.project-title,
+.skill-card {
+    color: #222 !important;  
+    font-weight: 600;
+}
+
+.experience-duration,
+.education-duration,
+.project-category,
+.service-item-text {
+    color: #555 !important; 
+    font-weight: 500;
+}
+
+
+.service-icon-box {
+    background: #fff !important; 
+    border-radius: 10px;
+    padding: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.project-img {
+    border-radius: 12px;  
+    overflow: hidden;  
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.project-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project-item:hover .project-img img {
+    transform: scale(1.05);  
+}
+
+
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+.skill-card {
+    padding: 10px 18px;
+    font-size: 14px;
+    border-radius: 8px;
+    background: #fff;
+    color: #222;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.skill-card:hover {
+    background: #ffb700 !important;
+    color: #fff !important;
+    box-shadow: 0 4px 10px rgba(255, 183, 0, 0.2);
+}
+
+
+.filter-list {
+    background: #ffffff !important;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.filter-item button {
+    background: #ffffff !important; 
+    color: #222 !important; 
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.filter-item button:hover,
+.filter-item button.active {
+    background: #ffb700 !important;
+    color: #fff !important;
+    border: 1px solid #ffb700;
+    box-shadow: 0 2px 5px rgba(255, 183, 0, 0.2);
+}
+
+
+
+
+
+
+
+
+
+
+.blog-post-item {
+    background: #ffffff !important;  
+    border-radius: 15px;  
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  
+    transition: all 0.3s ease-in-out; 
+    overflow: hidden; 
+}
+
+
+.blog-post-item:hover {
+    transform: translateY(-5px);  
+    background: #f8f8f8 !important;  
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+}
+
+
+.blog-banner-box {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;  
+    overflow: hidden;  
+    margin-bottom: 15px;
+}
+
+.blog-banner-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.blog-post-item:hover .blog-banner-box img {
+    transform: scale(1.05);  
+}
+
+
+.blog-item-title {
+    color: #222 !important;  
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+
+.blog-category {
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffb700 !important;  
+    text-transform: uppercase;
+}
+
+
+.blog-text {
+    color: #444 !important; 
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+.blog-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
+
+
+
+.r-title {
+    position: relative;
+    font-size: 24px; 
+    font-weight: 700;
+    color: #222; 
+    text-align: center;
+    display: block;
+    margin-bottom: 20px; 
+}
+
+
+.r-title::after {
+    content: "";
+    display: block;
+    width: 60px; 
+    height: 5px; 
+    background: linear-gradient(to right, #ffb700, #ffcc66); 
+    border-radius: 10px; 
+    margin: 8px auto 0 auto; 
+}
+
+
+
+
+
+
+.am-card {
+    background: #ffffff !important;  
+    border-radius: 16px; 
+    padding: 24px; 
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.am-card:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12); 
+    transform: translateY(-4px); 
+}
+
+
+.am-card p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #333; 
+    line-height: 1.6; 
+}
+
+
+.am-card p strong {
+    color: #4A90E2; 
+    font-weight: 600;
+}
+
+
+@media (max-width: 768px) {
+    .am-card {
+        padding: 20px;
+    }
+}
+
+
+.am-card:hover {
+    background: #f9f9f9 !important;  
+    border: 2px solid #ffb700 !important;  
+    box-shadow: 0 0 15px rgba(255, 183, 0, 0.2);
+}
+
+
+.service-item:hover{
+  background: #f9f9f9 !important;  
+    border: 2px solid #ffb700 !important;  
+    box-shadow: 0 0 15px rgba(255, 183, 0, 0.2);
+}
+
+
+.contact-item:hover {
+  background: #f9f9f9 !important;  
+    border: 2px solid #ffb700 !important;  
+    box-shadow: 0 0 15px rgba(255, 183, 0, 0.2);
+}
+
+
+
+.linkedin:hover {
+    background: #0077B5;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.github:hover {
+    background: #181717;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.medium:hover {
+    background: #12100E;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.social-link i {
+    transition: color 0.3s ease-in-out;
+}
+
+.social-link:hover i {
+    color: #fff;
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 6px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c0c0c0; 
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a0a0a0; 
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #c0c0c0 #f1f1f1;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+  
+  .main-content {
+    padding-inline: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  
+  .sidebar {
+    position: static;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+
+ 
+  .main-content {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  
+  .experience-card,
+  .education-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .icon-box {
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+ 
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+
+  .project-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+ 
+  .contact-section > div {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  
+  .blog-posts-list {
+    grid-template-columns: 1fr;
+  }
+
+ 
+  .navbar-list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+
+  html {
+    font-size: 14px;
+  }
+
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+ 
+  .experience-card,
+  .education-card {
+    padding: 15px;
+  }
+
+  
+  .mapbox iframe {
+    height: 300px;
+  }
+
+  /* Social links */
+  .social-list {
+    flex-wrap: wrap;
+  }
+
+  
+  .service-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-icon-box {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  
+  .avatar-box img {
+    width: 80px;
+    height: 80px;
+  }
+
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+ 
+  .filter-list {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  
+  .project-img img {
+    width: 100%;
+    height: auto;
+  }
+
+ 
+  .blog-banner-box {
+    height: 150px;
+  }
+
+  
+  .navbar-link {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+@media (max-width: 360px) {
+  
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-title,
+  .education-title {
+    font-size: 1rem;
+  }
+
+ 
+  .project-title {
+    font-size: 0.9rem;
+  }
+}
+
+.project-item {
+  display: none; /* Hide all items by default */
+}
+
+.project-item.active {
+  display: block; /* Show only active items */
+}
+
+
+  </style>
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+
+
+<div class="sidebar-info" style="text-align: center; padding: 20px;">
+
+    <!-- Profile Image -->
+    <figure class="avatar-box" style="display: flex; justify-content: center;">
+        <img src="assets/images/vdj.jpg" alt="Vasu Devan" width="100" style="border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    </figure>
+
+    <!-- Name & Title -->
+    <div class="info-content">
+        <h1 class="name" title="" style="font-size: 22px; font-weight: 700; color: #222; margin-top: 12px;">Vasu Devan</h1>
+        <p class="title" style="background: #E3F9E5;; color: rgb(8, 8, 8); padding: 6px 12px; border-radius: 8px; font-size: 14px; font-weight: 500; display: inline-block; margin-top: 6px;">
+            Software Development Engineer
+        </p>
+    </div>
+
+    <!-- Show Contacts Button -->
+    <button class="info_more-btn" data-sidebar-btn style="margin-top: 15px; background: transparent; border: none; color: #333; font-size: 16px; cursor: pointer;">
+        <span>Show Contacts</span>
+        <i class="fa-solid fa-chevron-down" style="margin-left: 5px;"></i>
+    </button>
+
+</div>
+
+
+      <div class="sidebar-info_more ">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+              <div class="service-icon-box" style="background: #E3F9E5; padding: 12px; border-radius: 8px; margin-right: 15px;">
+                  <i class="fas fa-envelope" style="font-size: 20px; color: #28A745;"></i>
+              </div>
+              <div class="contact-info">
+                  <p class="contact-title">Email</p>
+                  <a href="mailto:vasu.devan.skj@gmail.com" class="contact-link">vasu.devan.skj@gmail.com</a>
+              </div>
+          </li>
+      
+          <li class="contact-item">
+              <div class="service-icon-box" style="background: #E7F3FF; padding: 12px; border-radius: 8px; margin-right: 15px;">
+                  <i class="fas fa-phone" style="font-size: 20px; color: #007BFF;"></i>
+              </div>
+              <div class="contact-info">
+                  <p class="contact-title">Phone</p>
+                  <a href="tel:+918904912788" class="contact-link">+91 89049-12788</a>
+              </div>
+          </li>
+      
+          <li class="contact-item">
+              <div class="service-icon-box" style="background: #FFF3CD; padding: 12px; border-radius: 8px; margin-right: 15px;">
+                  <i class="fas fa-map-marker-alt" style="font-size: 20px; color: #FFC107;"></i>
+              </div>
+              <div class="contact-info">
+                  <p class="contact-title">Location</p>
+                  <address>Bengaluru, KA, India</address>
+              </div>
+          </li>
+      
+      </ul>
+      
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item" style="position: relative; display: inline-block;">
+              <a href="https://www.linkedin.com/in/vdj-vasudevan/" class="social-link" 
+                 style="background: #E3F2FD; padding: 12px; border-radius: 50%; position: relative;">
+                  <i class="fab fa-linkedin-in" style="font-size: 20px; color: #0077B5;"></i>
+                  <span class="tooltip" 
+                        style="visibility: hidden; background: #333; color: #fff; text-align: center; padding: 5px 8px; border-radius: 5px;
+                               position: absolute; bottom: 150%; left: 50%; transform: translateX(-50%);
+                               font-size: 12px; white-space: nowrap; opacity: 0; transition: opacity 0.3s;">
+                      LinkedIn
+                  </span>
+              </a>
+          </li>
+      
+          <li class="social-item" style="position: relative; display: inline-block;">
+              <a href="https://github.com/vdj-vasudevan" class="social-link" 
+                 style="background: #F3F4F6; padding: 12px; border-radius: 50%; position: relative;">
+                  <i class="fab fa-github" style="font-size: 20px; color: #181717;"></i>
+                  <span class="tooltip" 
+                        style="visibility: hidden; background: #333; color: #fff; text-align: center; padding: 5px 8px; border-radius: 5px;
+                               position: absolute; bottom: 150%; left: 50%; transform: translateX(-50%);
+                               font-size: 12px; white-space: nowrap; opacity: 0; transition: opacity 0.3s;">
+                      GitHub
+                  </span>
+              </a>
+          </li>
+      
+          <li class="social-item" style="position: relative; display: inline-block;">
+              <a href="https://medium.com/@vasu-devan-skj" class="social-link" 
+                 style="background: #FFF3CD; padding: 12px; border-radius: 50%; position: relative;">
+                  <i class="fab fa-medium-m" style="font-size: 20px; color: #12100E;"></i>
+                  <span class="tooltip" 
+                        style="visibility: hidden; background: #333; color: #fff; text-align: center; padding: 5px 8px; border-radius: 5px;
+                               position: absolute; bottom: 150%; left: 50%; transform: translateX(-50%);
+                               font-size: 12px; white-space: nowrap; opacity: 0; transition: opacity 0.3s;">
+                      Medium
+                  </span>
+              </a>
+          </li>
+      
+      </ul>
+      
+      
+      
+
       </div>
-      <main id="main">
-         <section id="about" class="about-mf sect-pt4 route">
-            <div class="container">
-               <div class="row">
-                  <div class="col-sm-12">
-                     <div class="title-box text-center " style="margin-top: -30px;">
-                        <h4 class="title-a ">
-                           About
-                        </h4>
-                        <p class="subtitle-a">
-                           Personal details with hobbies & Interests.
-                        </p>
-                        <div class="line-mf"></div>
-                     </div>
-                     <div class="box-shadow-full " style="margin-top: -30px;">
-                        <div class="row ">
-                           <div class="col col-md-6 col-sm-12 col-xs-12">
-                              <div class="row">
-                                 <div class="col-sm-6 col-md-5">
-                                    <div class="about-img text-center">
-                                       <img src="assets/img/testimonial-2.jpg" class="img-fluid rounded b-shadow-a" alt="">
-                                    </div>
-                                 </div>
-                                 <div class="col-sm-6 col-md-7">
-                                    <div class="about-info">
-                                       <p><span class="title-s">Name: </span> <span>Vasu Devan S</span></p>
-                                       <p><span class="title-s">Profile: </span> <span>Data Scientest </span></p>
-                                       <p><span class="title-s">Email: </span> <span>vasu.devan.skj@gmail.com</span></p>
-                                       <p><span class="title-s">Phone: </span> <span>(+91) 89049 12788</span></p>
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="col-md-16 mb-5">
-                                 <div class="about-me pt-4 pt-md-0">
-                                    <div class="title-box-2 text-center">
-                                       <h5 class="title-left">
-                                          About me
-                                       </h5>
-                                    </div>
-                                    <p class="lead">
-                                       I'm an Data Scientest Intern at Analytics Vidhya.
-                                    </p>
-                                    <p class="lead">
-                                       Currently Working on Building model on Supervised Learning like Regression based models, Tree Based models and Booster models.
-                                    </p>
-                                    <p class="lead">
-                                       Data Mining, Data Cleaning, Web Scraping using Python
-                                    </p>
-                                    <p class="lead">
-                                       Preparing Dashboard/Report with Power-BI and Excel  
-                                    </p>
-                                 </div>
-                              </div>
-                           </div>
-                           <div class="col-md-6 mt-n5" style="margin-top: -40px;">
-                              <div class="about-extra">
-                                <div class="title-box-2 text-center">
-                                    <h5 class="title-left">
-                                     Hobbies & Interests
-                                    </h5>
-                                 </div>
-                                 <div class="about-extra-icon text-center">
-                                    <ul>
-                                       <li>
-                                          <p class="text-dark"><i class="fa fa-gamepad"></i><br><span>Games</span></p>
-                                       </li>
-                                       <li>
-                                          <p class="text-dark"><i class="fa fa-headphones"></i><br><span>Music</span></p>
-                                       </li>
-                                       <li>
-                                          <p class="text-dark"><i class="fa fa-plane"></i><br><span>Travel</span></p>
-                                       </li>
-                                       <li>
-                                          <p class="text-dark"><i class="fa fa-laptop"></i><br><span>Coding</span></p>
-                                       </li>
-                                       <li>
-                                          <p class="text-dark"><i class="fa fa-film" aria-hidden="true"></i>
-                                             <br><span>Cinema</span>
-                                          </p>
-                                       </li>
-                                       <li>
-                                          <p class="text-dark"><i class="fa fa-desktop"></i><br><span>Gadjets</span></p>
-                                       </li>
-                                       <li>
-                                          <p class="text-dark"><i class="fab fa-chrome"></i><br><span>Browsing</span></p>
-                                       </li>
-                                       <li>
-                                          <p class="text-dark"><i class="fa fa-sitemap"></i><br><span>Technology</span></p>
-                                       </li>
-                                       <li>
-                                          <p class="text-dark"><i class="fas fa-newspaper"></i><br><span>Magazines</span></p>
-                                       </li>
-                                    </ul>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <section id="skill" class="section text-white bg-black" style="background-color: black;">
-            <div class="container">
-               <div class="row mt-3">
-                  <div class="col-sm-12">
-                     <div class="title-box text-center mt-4">
-                        <h3 class="title-a text-white">
-                           Technologies Worked On
-                        </h3>
-                        <p class="subtitle-a">
-                           Tools & technical Skills.
-                        </p>
-                        <div class="line-mf"></div>
-                     </div>
-                  </div>
-               </div>
-               <div>
-                  <div class="container">
-                     <div class="row">
-                        <div class="col-md-12 col-sm-12 col-xs-12 mt-n4" style="text-align:center; ">
-                           <div class="feature-block feature-boxed feature-decorated" style="margin-top: -30px;">
-                              <h4 class="text-center  mt-sm-0 mt-xs-0 mb-2 mb-sm-0 mb-xs-0 mb-md-n5 text-white">Data Science </h4>
-                              <div class="row p-md-8 p-sm-4 p-xs-4 ">
-                                 <div class="col col-md-2 col-sm-4 col-xs-4 pb-2 ">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img src="img/skills/py.png" style="text-align:center; ">
-                                       <p><b>Python</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-4 col-xs-4 pb-2 ">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img src="img/skills/numpy.png">
-                                       <p><b>Numpy</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-4 col-xs-4 pb-2">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img src="img/skills/pandas.png">
-                                       <p><b>Pandas</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-4 col-xs-4 pb-2">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img src="img/skills/scikit.png">
-                                       <p><b>Scikit&nbspLearn</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-6 col-xs-6 pb-2">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img src="img/skills/matplot.png">
-                                       <p><b>Matplotlib</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-6 col-xs-6 pb-2 ">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img src="img/skills/seaborn.png">
-                                       <p><b>Seaborn</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-6 col-xs-6 pb-2 pt-4">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img src="img/skills/github.png">
-                                       <p><b>Github</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-6 col-xs-6 pb-2 pt-4">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img src="img/skills/scipy.png">
-                                       <p><b> Scipy</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-6 col-xs-6 pb-2 pt-4">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img class="bg-light" src="img/skills/sql.png">
-                                       <p><b>SQL</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-6 col-xs-6 pb-2 pt-4">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img class="bg-light" src="img/skills/excel.png">
-                                       <p><b>Excel</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-6 col-xs-6 pb-2 pt-4">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img class="bg-light" src="img/skills/power_bi.png">
-                                       <p><b>Power BI</b></p>
-                                    </div>
-                                 </div>
-                                 <div class="col col-md-2 col-sm-6 col-xs-6 pb-2 pt-4">
-                                    <div class="feature-block feature-boxed feature-decorated" style="height:133px; width:auto;">
-                                       <img class="bg-light" src="img/skills/web_scrape.png">
-                                       <p><b>Web Scrape</b></p>
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <section id="work" class="portfolio-mf sect-pt4 route">
-            <div class="container" style="margin-top:-30px;">
-               <div class="row">
-                  <div class="col-sm-12">
-                     <div class="title-box text-center">
-                        <h3 class="title-a">
-                           Projects
-                        </h3>
-                        <p class="subtitle-a">
-                           Project Details.
-                        </p>
-                        <div class="line-mf"></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-4">
-                     <div class="work-box">
-                        <a href="img/projects/Web_Scraping/web_1_1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                           <div class="work-img">
-                              <img src="img/projects/Web_Scraping/web_1.jpg" alt="" class="img-fluid">
-                           </div>
-                        </a>
-                        <div class="work-content">
-                           <div class="row">
-                              <div class="col-sm-8">
-                                 <h2 class="w-title">Web Scraping </h2>
-                                 <div class="w-more">
-                                    <span class="w-ctegory">Python</span> <span class="w-date"></span>
-                                 </div>
-                              </div>
-                              <div class="col-sm-4">
-                                 <div class="w-like">
-                                    <a href="Web_scraping.html"> <span class="bi bi-plus-circle"></span></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="work-box">
-                        <a href="img/projects/Linear_Regression/Linear_1_1.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                           <div class="work-img">
-                              <img src="img/projects/Linear_Regression/Linear_1.png" alt="" class="img-fluid">
-                           </div>
-                        </a>
-                        <div class="work-content">
-                           <div class="row">
-                              <div class="col-sm-8">
-                                 <h2 class="w-title">Housing Price Prediction</h2>
-                                 <div class="w-more">
-                                    <span class="w-ctegory">Python</span>  <span class="w-date"></span>
-                                 </div>
-                              </div>
-                              <div class="col-sm-4">
-                                 <div class="w-like">
-                                    <a href="Linear_Regression.html"> <span class="bi bi-plus-circle"></span></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="work-box">
-                        <a href="img/projects/NextProj.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                           <div class="work-img">
-                              <img src="img/projects/NextProj.jpg" alt="" class="img-fluid">
-                           </div>
-                        </a>
-                        <div class="work-content">
-                           <div class="row">
-                              <div class="col-sm-8">
-                                 <h2 class="w-title">EDA on Credit Card Data</h2>
-                                 <div class="w-more">
-                                    <span class="w-ctegory">Python</span> <span class="w-date"></span>
-                                 </div>
-                              </div>
-                              <div class="col-sm-4">
-                                 <div class="w-like">
-                                    <a href="https://github.com/vdj-vasudevan/EDA-on-Credit-card-analysis/blob/main/EDA%20.ipynb"> <span class="bi bi-plus-circle"></span></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="work-box">
-                        <a href="img/projects/Air_cargo/air_cargo_1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                           <div class="work-img">
-                              <img src="img/projects/Air_cargo/air_cargo_1.jpg" alt="" class="img-fluid">
-                           </div>
-                        </a>
-                        <div class="work-content">
-                           <div class="row">
-                              <div class="col-sm-8">
-                                 <h2 class="w-title pb-4">Air Cargo Analysis</h2>
-                                 <div class="w-more">
-                                    <span class="w-ctegory">SQL</span>  <span class="w-date"></span>
-                                 </div>
-                              </div>
-                              <div class="col-sm-4">
-                                 <div class="w-like">
-                                    <a href="ACA_Sql.html"> <span class="bi bi-plus-circle"></span></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="work-box">
-                        <a href="img/projects/PowerBi/powerbi_1.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                           <div class="work-img">
-                              <img src="img/projects/PowerBi/powerbi_1.png" alt="" class="img-fluid">
-                           </div>
-                        </a>
-                        <div class="work-content">
-                           <div class="row">
-                              <div class="col-sm-8">
-                                 <h2 class="w-title">Analysis and Forcasting of the Weekly Demand</h2>
-                                 <div class="w-more">
-                                    <span class="w-ctegory">Power BI</span> <span class="w-date"></span>
-                                 </div>
-                              </div>
-                              <div class="col-sm-4">
-                                 <div class="w-like">
-                                    <a href="powerbi.html"> <span class="bi bi-plus-circle"></span></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="work-box">
-                        <a href="img/projects/excel/Excel_1_1.png" data-gallery="portfolioGallery" class="portfolio-lightbox">
-                           <div class="work-img">
-                              <img src="img/projects/excel/Excel_1.jpg" alt="" class="img-fluid">
-                           </div>
-                        </a>
-                        <div class="work-content">
-                           <div class="row">
-                              <div class="col-sm-8">
-                                 <h2 class="w-title">Analysis and suggestion to improve the Sales</h2>
-                                 <div class="w-more">
-                                    <span class="w-ctegory">Excel</span><span class="w-date"></span>
-                                 </div>
-                              </div>
-                              <div class="col-sm-4">
-                                 <div class="w-like">
-                                    <a href="Excel.html"> <span class="bi bi-plus-circle"></span></a>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  
-                  
-               </div>
-            </div>
-         </section>
-         <section id="t&c" class="imgzoom pb-0 bg-black  text-white" style="background-color: black;">
-            <div class="container ">
-               <div class="row mt-3">
-                  <div class="col-sm-12">
-                     <div class="title-box text-center mt-4">
-                        <h4 class="title-a text-white">
-                           Certificates
-                        </h4>
-                        <p class="subtitle-a">
-                           Course training completion certificates.
-                        </p>
-                        <div class="line-mf"></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row bg-black">
-                  <div class="col-sm-6 col-md-4 mb-4 mb-md-0 ">
-                     <article class="news-block border-0 ">
-                        <div class="news-body p-0  text-white" style="background-color: black;">
-                           <div class="mb-4 text-white">
-                              <img class="img-fluid w-100 rounded " src="img/certificates/Coures_1.jpg " alt=" ">
-                           </div>
-                           <small class="d-block mb-1 ">May 19,2022</small>
-                           <h2 class="h4 mb-1 ">
-                              <a target="_blank" class="text-white" href="https://www.coursera.org/account/accomplishments/specialization/FBDZEUPA8VES"><u>Introduction to Data Science Specialization IBM</u></a>
-                           </h2>
-                        </div>
-                     </article>
-                  </div>
-                  <div class="col-sm-6 col-md-4 mb-5 mb-md-0 bg-black">
-                     <article class="news-block border-0 ">
-                        <div class="news-body p-0 bg-black " style="background-color: black;">
-                           <div class="mb-4 ">
-                              <img class="img-fluid w-100 rounded " src="img/certificates/Coures_2.jpg" alt=" ">
-                           </div>
-                           <small class="d-block mb-1 text-white">Dec 30, 2021</small>
-                           <h2 class="h4 mb-1 ">
-                              <a target="_blank" class="text-white mb-2" href="https://trainings.internshala.com/view_certificate/96E2A481-FC9F-2E6A-7F3F-88B83E88FB38/2DDC9B05-F298-EA5C-9523-67B1B6BEB699/"><u>Machine Learning Internshala</u></a>
-                           </h2>
-                        </div>
-                     </article>
-                  </div>
-                  <div class="col-sm-6 col-md-4 ">
-                     <article class="news-block border-0 bg-black" style="background-color: black;">
-                        <div class="news-body p-0 ">
-                           <div class="mb-4 ">
-                              <img class="img-fluid w-100 rounded " src="img/certificates/Courses_3.jpg " alt=" ">
-                           </div>
-                           <small class="d-block mb-1 text-white ">Jan 28, 2022</small>
-                           <h2 class="h4 mb-1 ">
-                              <a target="_blank" class="text-white mb-2" href="https://courses.analyticsvidhya.com/certificates/c3mktbjxcx"><u>Structured Query Language for Data Science Analysis Vidhya</u></a>
-                           </h2>
-                        </div>
-                     </article>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <section id="blog" class="blog-mf sect-pt4 route">
-            <div class="container">
-               <div class="row">
-                  <div class="col-sm-12">
-                     <div class="title-box text-center">
-                        <h3 class="title-a">
-                           Blog
-                        </h3>
-                        <p class="subtitle-a">
-                     
-                        </p>
-                        <div class="line-mf"></div>
-                     </div>
-                  </div>
-               </div>
-               <div class="row">
-                  <div class="col-md-4">
-                     <div class="card card-blog">
-                        <div class="card-img">
-                           <a href="https://vasu-devan-skj.medium.com/the-journey-into-data-science-d9774c9ea66b"><img src="img/blog/blog_1.jpg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="card-body">
-                           <div class="card-category-box">
-                              <div class="card-category">
-                                 <h6 class="category">Blog</h6>
-                              </div>
-                           </div>
-                           <h3 class="card-title"><a href="https://vasu-devan-skj.medium.com/the-journey-into-data-science-d9774c9ea66b">The Journey into Data Science</a></h3>
-                           <p class="card-description">
-                              A Small Explation of my Journey or Should i say Beginning of Data Science in my life and How i joined Analytics-vidhya
-                           </p>
-                        </div>
-                        <div class="card-footer">
-                           <div class="post-author">
-                              <a href="#">
-                              <img src="assets/img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                              <span class="author ">Vasu Devan S</span>
-                              </a>
-                           </div>
-                           
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="card card-blog">
-                        <div class="card-img">
-                           <a href="https://vasu-devan-skj.medium.com/introduction-to-structured-query-language-sql-67e3190165e9"><img src="img/blog/blog_2.jpg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="card-body">
-                           <div class="card-category-box">
-                              <div class="card-category">
-                                 <h6 class="category">SQL</h6>
-                              </div>
-                           </div>
-                           <h3 class="card-title"><a href="https://vasu-devan-skj.medium.com/introduction-to-structured-query-language-sql-67e3190165e9">Introduction to SQL</a></h3>
-                           <p class="card-description">
-                              Basics of Structured Query Language and few details SQL, How to Use SQL and how to Write Basic Queries in SQl.
-                           </p>
-                        </div>
-                        <div class="card-footer">
-                           <div class="post-author">
-                              <a href="#">
-                              <img src="assets/img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                              <span class="author">Vasu Devan S</span>
-                              </a>
-                           </div>
-                           
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-4">
-                     <div class="card card-blog">
-                        <div class="card-img">
-                           <a href="https://medium.com/analytics-vidhya/further-into-sql-part-1-afcaf61c8c92"><img src="img/blog/blog_3.jpg" alt="" class="img-fluid"></a>
-                        </div>
-                        <div class="card-body">
-                           <div class="card-category-box">
-                              <div class="card-category">
-                                 <h6 class="category">SQL</h6>
-                              </div>
-                           </div>
-                           <h3 class="card-title"><a href="https://medium.com/analytics-vidhya/further-into-sql-part-1-afcaf61c8c92">Further into SQL</a></h3>
-                           <p class="card-description">
-                              Few Consepts of SQL to Import and Export Data To and From Database, and Explation & Queries used for that.
-                           </p>
-                        </div>
-                        <div class="card-footer">
-                           <div class="post-author">
-                              <a href="#">
-                              <img src="assets/img/testimonial-2.jpg" alt="" class="avatar rounded-circle">
-                              <span class="author">Vasu Devan S</span>
-                              </a>
-                           </div>
-                           
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-         <section id="contact" class=" text-white " style="background-color: black;">
-            <div class="container ">
-               <div class="row ">
-                  <div class="col-lg-10 mx-lg-auto ">
-                     <div class="row mt-3">
-                        <div class="col-sm-12">
-                           <div class="title-box text-center mt-4">
-                              <h4 class="title-a text-white">
-                                 Contact
-                              </h4>
-                              <p class="subtitle-a">
-                                 get in touch.
-                              </p>
-                              <div class="line-mf"></div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="row mb-5 ">
-                        <div class="col-md-4 mb-5 mb-md-0 ">
-                           <div class="feature-block ">
-                              <div class="feature-icon text-primary mb-4 ">
-                                 <div class="mx-auto ">
-                                    <i class="fa fa-mobile"></i>
-                                 </div>
-                              </div>
-                              <p class="text-center ">+91 8904912788 </p>
-                           </div>
-                        </div>
-                        <div class="col-md-4 mb-5 mb-md-0 ">
-                           <div class="feature-block ">
-                              <div class="feature-icon text-primary mb-4 ">
-                                 <div class="mx-auto ">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                 </div>
-                              </div>
-                              <p class="text-center ">Banglore,Karnataka<br> India</p>
-                           </div>
-                        </div>
-                        <div class="col-md-4 ">
-                           <div class="feature-block ">
-                              <div class="feature-icon text-primary mb-4 ">
-                                 <div class="mx-auto ">
-                                    <i class="fas fa-at"></i>
-                                 </div>
-                              </div>
-                              <p class="text-center text-white "><a href="mailto:vasu.devan.skj@gmail.com " class="text-white ">vasu.devan.skj@gmail.com</a><br></p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </section>
-      </main>
-      <footer style="background-color: white;">
-         <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="copyright-box">
-                     <div class="credits text-dark">
-                        Designed & Developed by <a href="https://bootstrapmade.com/" class="text-dark">Vasu Devan</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-         <div class="container mt-3">
-            <nav class="mb-3">
-                <ul class="list-inline text-center">
-                    <li class="list-inline-item">
-                        <a class="btn btn-sm btn-icon btn-outline-dark btn-transparent rounded-circle" href="https://github.com/vdj-vasudevan">
-                            <span class="btn-icon-inner fab fa-github"></span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-sm btn-icon btn-outline-dark btn-transparent rounded-circle" href="mailto:vasu.devan.skj@gmail.com">
-                            <span class="btn-icon-inner fab fa-google"></span>
-                        </a>
-                    </li>
-                    <li class="list-inline-item">
-                        <a class="btn btn-sm btn-icon btn-outline-dark btn-transparent rounded-circle" href="https://www.linkedin.com/in/vdj-vasudevan/">
-                            <span class="btn-icon-inner fab fa-linkedin"></span>
-                        </a>
-                    </li>
 
-                </ul>
-            </nav>
+    </aside>
 
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content" >
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar" style="background-color: #f9f9f9;">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about" style="background-color: #f9f9f9;">
+
+        <header>
+          <h2 class="h2 article-title text-black">About me</h2>
+        </header>
+
+        <section class="text-black am-card">
+          <p>
+            I am a <strong>Software Development Engineer</strong> with over 2 years of experience, 
+            specializing in <strong>Golang, Python, and Node.js</strong>. 
+            My expertise lies in building <strong>scalable microservices</strong>, automation workflows, and 
+            optimizing backend systems. 
+        
+            I have successfully implemented <strong>RPA solutions</strong>, anti-bot detection mechanisms, and 
+            <strong>CAPTCHA-solving techniques</strong> (tick, slider, audio) to enhance automation efficiency. 
+            <br>   <br>
+            Additionally, I have worked extensively with <strong>AWS (Lambda, ECS Fargate, DynamoDB)</strong>, 
+            <strong>Docker, Kubernetes</strong>, and <strong>CI/CD pipelines</strong>, ensuring high-performance, 
+            cloud-native solutions.
+        <br>   <br>
+            Beyond backend development, I have hands-on experience in <strong>data extraction, AI-powered automation</strong>, 
+            and <strong>Redis caching for API optimization</strong>. My ability to integrate <strong>machine learning models</strong>, 
+            solve real-world automation challenges, and develop high-performance systems has enabled me to 
+            contribute effectively to <strong>fast-paced, tech-driven environments</strong>. 
+        
+            I am passionate about <strong>building efficient, scalable solutions</strong> and continuously exploring 
+            <strong>innovative technologies</strong> to solve complex problems.
+          </p>
+        </section>
+        
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service mt-4" >
+
+          <h3 class="h3 service-title text-black text-center r-title">What i'm doing</h3>
+
+        <!-- FontAwesome for Modern Icons -->
+
+<ul class="service-list" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;">
+
+    <li class="service-item" style="display: flex; align-items: center; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease-in-out;">
+        
+        <!-- Icon Box -->
+        <div class="service-icon-box" style="background: #FFF5D9; padding: 12px; border-radius: 8px; margin-right: 15px;">
+            <i class="fa-solid fa-robot" style="font-size: 24px; color: #FFB700;"></i>
         </div>
-      </footer>
-      <div id="preloader"></div>
-      <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-      <script src="assets/vendor/purecounter/purecounter.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-      <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-      <script src="assets/vendor/typed.js/typed.min.js"></script>
-      <script src="assets/vendor/php-email-form/validate.js"></script>
-      <script src="assets/js/main.js"></script>
-      <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="assets/js/jquery-imagepreviewer.js"></script>
-   </body>
+
+        <!-- Content -->
+        <div class="service-content-box">
+            <h4 class="h4 service-item-title" style="font-size: 18px; font-weight: 600; color: #222;">Automation & Web Scraping</h4>
+            <p class="service-item-text" style="color: #555; font-size: 14px;">
+                • Automating workflows using Chromedp, Puppeteer, undetected-chromedriver, and Selenium. <br>
+                • Bypassing CAPTCHAs and bot detection for efficient data extraction.
+            </p>
+        </div>
+
+    </li>
+
+    <li class="service-item" style="display: flex; align-items: center; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease-in-out;">
+        
+        <!-- Icon Box -->
+        <div class="service-icon-box" style="background: #EAF5FF; padding: 12px; border-radius: 8px; margin-right: 15px;">
+            <i class="fa-solid fa-server" style="font-size: 24px; color: #007BFF;"></i>
+        </div>
+
+        <!-- Content -->
+        <div class="service-content-box">
+            <h4 class="h4 service-item-title" style="font-size: 18px; font-weight: 600; color: #222;">Backend Development</h4>
+            <p class="service-item-text" style="color: #555; font-size: 14px;">
+                • Building scalable microservices using Golang, Python, and Node.js. <br>
+                • Enhancing performance with Redis caching, Kafka/Pulsar messaging, and distributed systems.
+            </p>
+        </div>
+
+    </li>
+
+    <li class="service-item" style="display: flex; align-items: center; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease-in-out;">
+        
+        <!-- Icon Box -->
+        <div class="service-icon-box" style="background: #E3F9E5; padding: 12px; border-radius: 8px; margin-right: 15px;">
+            <i class="fa-solid fa-brain" style="font-size: 24px; color: #28A745;"></i>
+        </div>
+
+        <!-- Content -->
+        <div class="service-content-box">
+            <h4 class="h4 service-item-title" style="font-size: 18px; font-weight: 600; color: #222;">AI & Machine Learning</h4>
+            <p class="service-item-text" style="color: #555; font-size: 14px;">
+                • Developing ML/AI models for automation, analytics, and AI agents. <br>
+                • Working with LLMs, NLP (including NER), and data-driven decision-making.
+            </p>
+        </div>
+
+    </li>
+
+    <li class="service-item" style="display: flex; align-items: center; background: white; padding: 20px; border-radius: 12px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); transition: transform 0.3s ease-in-out;">
+        
+        <!-- Icon Box -->
+        <div class="service-icon-box" style="background: #FDE2E2; padding: 12px; border-radius: 8px; margin-right: 15px;">
+            <i class="fa-solid fa-cloud" style="font-size: 24px; color: #DC3545;"></i>
+        </div>
+
+        <!-- Content -->
+        <div class="service-content-box">
+            <h4 class="h4 service-item-title" style="font-size: 18px; font-weight: 600; color: #222;">Cloud & DevOps</h4>
+            <p class="service-item-text" style="color: #555; font-size: 14px;">
+                • Deploying applications on AWS (Lambda, ECS, S3, DynamoDB) and Azure. <br>
+                • Managing Docker & Kubernetes for scalable infrastructure.
+            </p>
+        </div>
+
+    </li>
+
+</ul>
+
+
+        </section>
+
+
+     
+      </article>
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume" style="   background: linear-gradient(to bottom, #f9f9f9, #e0e0e0);">
+
+        <header>
+          <h2 class="h2 article-title text-black">Resume</h2>
+        </header>
+        
+        <section class="experience-section "   >
+          <h2 class="section-title text-black text-center r-title">Experience</h2>
+        
+          <div class="experience-card">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <div class="experience-content">
+              <h3 class="experience-title ">Software Development Engineer - Freightify</h3>
+              <p class="experience-duration">Dec 2022 — Present</p>
+              <p class="experience-description">
+                Designed and implemented RPA solutions using Golang, Python, and Node.js, optimizing data extraction and workflows. Overcame complex automation challenges like CAPTCHA resolution and anti-bot detection. Deployed scalable, serverless solutions with AWS Lambda and ECS Fargate, reducing costs and improving efficiency. Enhanced API performance with Redis caching, cutting response times by 8-12%. Acted as the SPOC for stakeholders, ensuring seamless communication and project execution.
+              </p>
+            </div>
+          </div>
+        
+          <div class="experience-card" style="background-color: #f9f9f9;" >
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <div class="experience-content">
+              <h3 class="experience-title">Data Science Intern - Analytics Vidhya</h3>
+              <p class="experience-duration">Jan 2022 — Dec 2022</p>
+              <p class="experience-description">
+                Worked on Power BI reports, exploratory data analysis (EDA), and data preprocessing to derive meaningful insights and improve data quality. Developed and fine-tuned machine learning models for various applications while enhancing course and blog content to improve knowledge sharing. Designed comprehensive architecture diagrams to visualize project workflows, ensuring clarity in system design and implementation.
+              </p>
+            </div>
+          </div>
+        
+          <div class="experience-card">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <div class="experience-content">
+              <h3 class="experience-title">QA Engineer - Excel Die Casters</h3>
+              <p class="experience-duration">Sep 2019 — Dec 2021</p>
+              <p class="experience-description">
+                Monitored and analyzed quality performance to identify areas for improvement, leading to an 8% increase in production rate. Leveraged data analysis to drive process optimizations and enhance overall efficiency. Possess 2 years of experience in Quality Assurance (QA), successfully leading and managing a team of 5 members to ensure high standards of quality and operational excellence.
+              </p>
+            </div>
+          </div>
+        </section>
+        
+
+        <section class="experience-section education-section">
+          <h2 class="section-title text-black  text-center r-title">Education</h2>
+        
+          <div class="education-card">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <div class="education-content">
+              <h3 class="education-title">Visvesvaraya Technological University - BE</h3>
+              <p class="education-duration">Jul 2015 - Jul 2019</p>
+            </div>
+          </div>
+        
+          <div class="education-card">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+            <div class="education-content">
+              <h3 class="education-title">Jain Vidhyanikethan Pre University College - XII</h3>
+              <p class="education-duration">Jun 2013 - May 2015</p>
+            </div>
+          </div>
+        </section>
+        
+
+        <section class="skills-section ">
+          <h2 class="skills-title text-black  text-center r-title">My Skills</h2>
+        
+          <div class="skills-category">
+            <h5 class="category-title">Languages</h5>
+            <div class="skills-grid">
+              <div class="skill-card">Python</div>
+              <div class="skill-card">Golang</div>
+              <div class="skill-card">Node.js</div>
+            </div>
+          </div>
+        
+          <div class="skills-category">
+            <h5 class="category-title">Automation</h5>
+            <div class="skills-grid">
+              <div class="skill-card">RPA</div>
+              <div class="skill-card">Anti-bot Detection</div>
+              <div class="skill-card">CAPTCHA Solving</div>
+              <div class="skill-card">Data Extraction</div>
+            </div>
+          </div>
+        
+          <div class="skills-category">
+            <h5 class="category-title">Frameworks & Libraries</h5>
+            <div class="skills-grid">
+              <div class="skill-card">Pandas</div>
+              <div class="skill-card">NumPy</div>
+              <div class="skill-card">Selenium</div>
+              <div class="skill-card">ChromeDP</div>
+              <div class="skill-card">Pyautogui</div>
+              <div class="skill-card">PyTorch</div>
+              <div class="skill-card">Transformers (BERT)</div>
+              <div class="skill-card">LangChain</div>
+              <div class="skill-card">Puppeteer</div>
+            </div>
+          </div>
+        
+          <div class="skills-category">
+            <h5 class="category-title">Cloud Deployment Tools</h5>
+            <div class="skills-grid">
+              <div class="skill-card">AWS Lambda</div>
+              <div class="skill-card">DynamoDB</div>
+              <div class="skill-card">ECS Fargate</div>
+              <div class="skill-card">Docker</div>
+              <div class="skill-card">Serverless Framework</div>
+            </div>
+          </div>
+        
+          <div class="skills-category">
+            <h5 class="category-title">Databases</h5>
+            <div class="skills-grid">
+              <div class="skill-card">MySQL</div>
+              <div class="skill-card">MongoDB</div>
+            </div>
+          </div>
+        
+          <div class="skills-category">
+            <h5 class="category-title">Additional Skills</h5>
+            <div class="skills-grid">
+              <div class="skill-card">Data Preparation</div>
+              <div class="skill-card">Machine Learning</div>
+              <div class="skill-card">Deep Learning</div>
+              <div class="skill-card">Exploratory Data Analysis</div>
+              <div class="skill-card">Data Cleaning</div>
+              <div class="skill-card">AI Agents</div>
+              <div class="skill-card">Phi-data</div>
+              <div class="skill-card">Embedding</div>
+              <div class="skill-card">LLM</div>
+            </div>
+          </div>
+        </section>
+       
+        
+            <!--
+          - testimonials modal
+        -->
+
+   <div class="modal-container" data-modal-container>
+
+    <div class="overlay" data-overlay></div>
+
+    <section class="testimonials-modal">
+
+      <button class="modal-close-btn" data-modal-close-btn>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="modal-img-wrapper">
+        <figure class="modal-avatar-box">
+          <img src="./assets/images/avatar-1.png" alt="Daniel lewis" width="80" data-modal-img>
+        </figure>
+
+        <img src="./assets/images/icon-quote.svg" alt="quote icon">
+      </div>
+
+      <div class="modal-content">
+
+        <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+
+        <time datetime="2021-06-14">14 June, 2021</time>
+
+        <div data-modal-text>
+          <p>
+            Richard was hired to create a corporate identity. We were very pleased with the work done. She has a
+            lot of experience
+            and is very concerned about the needs of client. Lorem ipsum dolor sit amet, ullamcous cididt
+            consectetur adipiscing
+            elit, seds do et eiusmod tempor incididunt ut laborels dolore magnarels alia.
+          </p>
+        </div>
+
+      </div>
+
+    </section>
+
+  </div>
+      </article>
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio" style="background-color: #f9f9f9;">
+
+        <header>
+          <h2 class="h2 article-title text-black">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>WS & Automation</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Data Analytics</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>ML & AI Agent</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>WS & Automation</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Data Analytics</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>ML & AI Agent</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="WS & Automation">
+              <a href="https://github.com/vdj-vasudevan/Anti-Bot-Captcha-Solver" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Tick Captcha</h3>
+
+                <p class="project-category">WS & Automation</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="WS & Automation">
+              <a href="https://github.com/vdj-vasudevan/Web-scraping" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.jpg" alt="orizon" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Web Crawling & Scraping</h3>
+
+                <p class="project-category">WS & Automation</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ML & AI Agent">
+              <a href="https://github.com/vdj-vasudevan/Click-Through-Rate-" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Click-Through-Rate</h3>
+
+                <p class="project-category">ML & AI Agent</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ML & AI Agent">
+              <a href="https://github.com/vdj-vasudevan/Linear_Regression/blob/main/Linear%20Regression%20project%20solution.ipynb" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.jpg" alt="brawlhalla" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Housing Price Prediction</h3>
+
+                <p class="project-category">ML & AI Agent</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Data Analytics">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.jpg" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">EDA on Credit Card Data</h3>
+
+                <p class="project-category">Data Analytics</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Data Analytics">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.jpg" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Air Cargo Analysis</h3>
+
+                <p class="project-category">Data Analytics</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="Data Analytics">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Analysis and Forcasting of the Weekly Demand</h3>
+
+                <p class="project-category">Data Analytics</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ML & AI Agent">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Question_generator</h3>
+
+                <p class="project-category">ML & AI Agent</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="ML & AI Agent">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.jpg" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">ML & AI Agent</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <article class="blog" data-page="blog"  style="background-color: #f9f9f9;">
+
+        <header>
+          <h2 class="h2 article-title text-black">Blog</h2>
+        </header>
+
+        <section class="blog-posts" >
+
+          <ul class="blog-posts-list">
+
+            <li class="blog-post-item">
+              <a href="https://vasu-devan-skj.medium.com/bot-detective-vs-automation-overcoming-tick-captcha-challenges-9d11937feefd" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-1.png" alt="Design conferences in 2022" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Captcha Solver</p>
+
+                    <!-- <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time> -->
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    <!-- <a href="https://vasu-devan-skj.medium.com/bot-detective-vs-automation-overcoming-tick-captcha-challenges-9d11937feefd"> -->
+                      Anti Bot Captcha
+                    <!-- </a>     -->
+                  </h3>
+
+                  <p class="blog-text">
+                    Bot Detective vs Automation: Overcoming Tick Captcha Challenges.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://vasu-devan-skj.medium.com/the-journey-into-data-science-d9774c9ea66b" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-2.png" alt="Best fonts every designer" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">Journal</p>
+
+                    <!-- <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time> -->
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    <!-- <a href="https://vasu-devan-skj.medium.com/the-journey-into-data-science-d9774c9ea66b"> -->
+                      The Journey into Data Science
+                    <!-- </a> -->
+                  </h3>
+
+                  <p class="blog-text">
+                    A Small Explation of my Journey or Should i say Beginning of Data Science in my life and How i joined Analytics-vidhya
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://vasu-devan-skj.medium.com/introduction-to-structured-query-language-sql-67e3190165e9" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-3.png" alt="Design digest #80" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">SQL</p>
+<!-- 
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time> -->
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    <!-- <a href="https://medium.com/@vasu-devan-skj/introduction-to-structured-query-language-sql-67e3190165e9"> -->
+                      Introduction to SQL
+                    <!-- </a> -->
+                  </h3>
+
+                  <p class="blog-text">
+                    Basics of Structured Query Language and few details SQL, How to Use SQL and how to Write Basic Queries in SQl.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="blog-post-item">
+              <a href="https://medium.com/@vasu-devan-skj/further-into-sql-part-2-49642df0abff" target="_blank">
+
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog-4.png" alt="UI interactions of the week" loading="lazy">
+                </figure>
+
+                <div class="blog-content">
+
+                  <div class="blog-meta">
+                    <p class="blog-category">SQL</p>
+<!-- 
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">Fab 23, 2022</time> -->
+                  </div>
+
+                  <h3 class="h3 blog-item-title">
+                    <!-- <a href="https://medium.com/@vasu-devan-skj/further-into-sql-part-2-49642df0abff"></a> -->
+                    Further into SQ
+                  </h3>
+
+                  <p class="blog-text">
+                    Few Consepts of SQL to Import and Export Data To and From Database, and Explation & Queries used for that.
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact" style="background-color: #f9f9f9;">
+
+        <header>
+          <h2 class="h2 article-title text-black">Contact</h2>
+        </header>
+
+        <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14941.29826508275!2d77.45747379507213!3d12.6845918857936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae5b598319a6a1%3A0xea8a669de1411fca!2sHarohalli%2C%20Karnataka%20562112!5e1!3m2!1sen!2sin!4v1741110688878!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </figure>
+        </section>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<section class="contact-section">
+    <h2 class="h2 r-title text-black" >Contact</h2>
+
+    <a href="tel:89049 12788" style="text-decoration: none;" >
+    <div style="display: flex; justify-content: center; align-items: center; gap: 20px;">
+
+    
+       
+        <div style="display: flex; align-items: center; background: #fff; padding: 12px 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); gap: 10px;">
+            <i class="fa-solid fa-phone" style="font-size: 22px; color: #090909;"></i>
+            <span style="font-size: 16px; font-weight: 500; color: #333;">+91 89049 12788</span>
+        </div></a>
+
+
+        <div style="display: flex; align-items: center; background: #fff; padding: 12px 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); gap: 10px;">
+            <i class="fa-solid fa-location-dot" style="font-size: 22px; color: #090909;"></i>
+            <span style="font-size: 16px; font-weight: 500; color: #333;">Bangalore, Karnataka, India</span>
+        </div>
+
+
+         <a href="mailto:vasu.devan.skj@gmail.com" style="text-decoration: none;">
+        <div  style="display: flex; align-items: center; background: #fff; padding: 12px 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); gap: 10px;">
+            <i class="fa-solid fa-envelope" style="font-size: 22px; color: #090909;"></i>
+            <span style="font-size: 16px; font-weight: 500; color: #333;">vasu.devan.skj@gmail.com</span>
+        </div></a>
+
+    </div>
+</section>
+
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script>
+    document.querySelectorAll('.social-link').forEach(link => {
+        link.addEventListener('mouseover', function () {
+            this.querySelector('.tooltip').style.visibility = 'visible';
+            this.querySelector('.tooltip').style.opacity = '1';
+        });
+
+        link.addEventListener('mouseout', function () {
+            this.querySelector('.tooltip').style.visibility = 'hidden';
+            this.querySelector('.tooltip').style.opacity = '0';
+        });
+    });
+</script>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('[data-filter-btn]');
+    const filterItems = document.querySelectorAll('[data-filter-item]');
+
+    filterButtons.forEach(button => {
+      button.addEventListener('click', function () {
+        const filterValue = button.textContent.trim();
+
+        filterItems.forEach(item => {
+          if (filterValue === 'All') {
+            item.classList.add('active');
+          } else {
+            if (item.getAttribute('data-category') === filterValue) {
+              item.classList.add('active');
+            } else {
+              item.classList.remove('active');
+            }
+          }
+        });
+      });
+    });
+  });
+</script>
+
+</body>
+
 </html>
